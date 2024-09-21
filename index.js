@@ -27,3 +27,15 @@ const p = document.createElement("p");
 p.style.color = "white";
 p.textContent = "Me Too";
 h1.insertAdjacentElement("afterend", p);
+
+const btn = document.querySelector(".btn");
+console.log(btn);
+btn.onclick = () => alert("You pressed me!");
+
+const button = document.querySelector("#btn");
+button.addEventListener("click", alertFunction);
+
+function alertFunction(e) {
+  console.log(e.target);
+  e.target.style.cssText = "color: white; background-color: blue;";
+}
